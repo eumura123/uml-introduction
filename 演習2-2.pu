@@ -1,7 +1,0 @@
-@startuml ユースケース図
-rectangle ホテル{
-actor 経営者
-actor 従業員
-}
-従業員 <|-- 経営者
-@endtuml
