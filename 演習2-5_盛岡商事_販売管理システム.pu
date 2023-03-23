@@ -1,0 +1,12 @@
+@startuml ユースケース図
+left to right direction
+rectangle 盛岡商事{
+actor 販売部員
+rectangle 販売管理システム{
+usecase 注文商品を確認
+usecase 出荷状況を登録
+}
+}
+販売部員 --> 注文商品を確認
+販売部員 --> 出荷状況を登録
+@enduml
