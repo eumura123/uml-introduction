@@ -1,5 +1,6 @@
 @startuml 
 skinparam classAttributeIconSize 0
+hide Employee circle
 ' class A <<aa>> {}
 ' class B {
 ' - 属性１:int
@@ -17,7 +18,7 @@ skinparam classAttributeIconSize 0
 ' + 操作１():void
 ' + 操作２():String
 ' }
-class Enployee {
+class Employee {
 - id:int = 0
 - name:String
 # depertment:String
