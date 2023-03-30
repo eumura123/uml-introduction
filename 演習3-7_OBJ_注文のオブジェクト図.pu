@@ -1,5 +1,5 @@
 @startuml  
-object "<u>高橋洋平：顧客</u>" as k1{
+object "<u>高橋洋平：重要顧客</u>" as k1{
 氏名 = 高橋洋平
 住所
 }
@@ -26,9 +26,6 @@ object "<u>プロジェクタ：商品</u>" as s3{
 object "<u>注文：注文</u>" as t1{
 注文日
 数量
-}
-object "<u>重要顧客：重要顧客</u>" as j{
-
 }
 j -- k1
 k1 -- t1
