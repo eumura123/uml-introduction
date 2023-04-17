@@ -15,4 +15,6 @@ we <<-- ga :画面ファイル
 deactivate ga
 bu <<-- we :表示(画面ファイル)
 deactivate we
+ac <<-- bu :表示(画面ファイル)
+deactivate ac
 @enduml
