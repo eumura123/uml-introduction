@@ -1,0 +1,18 @@
+@startuml  
+hide footbox
+Actor ":ユーザー" as ac 
+participant ":ブラウザ" as bu
+participant ":Webサーバー" as we
+participant ":画像サーバー" as ga
+activate ac
+ac -> bu :閲覧(画像リンク)
+activate bu
+bu -> we :検索(画像リンク)
+activate we
+we -> ga :検索(画像リンク)
+activate ga
+we <<-- ga :画面ファイル
+deactivate ga
+bu <<-- we :表示(画面ファイル)
+deactivate we
+@enduml

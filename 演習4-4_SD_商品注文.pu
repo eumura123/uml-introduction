@@ -1,0 +1,24 @@
+@startuml  
+hide footbox
+Actor ":受注係" as ac
+participant "<<boundary>>\n:注文登録画面" as bo
+participant "<<entity>>\n:商品" as en
+activate ac
+ac -> bo :商品情報確認()
+activate bo
+bo -> en :商品情報取得()
+activate en
+bo <<-- en :商品情報
+bo -> bo :商品情報表示(商品情報)
+activate bo
+deactivate bo
+deactivate en
+deactivate bo
+ac -> bo :商品登録(注文情報)
+participant "<<entity>>\n:注文" as en1
+activate bo
+create en1
+bo -->> en1 :<<create>>生成()
+activate en1
+deactivate en1
+@enduml
