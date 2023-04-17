@@ -11,6 +11,7 @@ bu -> we :検索(画像リンク)
 activate we
 we -> ga :検索(画像リンク)
 activate ga
+ga -> ga :検索(画像リンク)
 we <<-- ga :画面ファイル
 deactivate ga
 bu <<-- we :表示(画面ファイル)
