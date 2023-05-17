@@ -1,0 +1,13 @@
+@startuml  
+left to right direction
+actor 客
+actor ベンダー
+rectangle 自動販売機{
+usecase 商品を購入する
+usecase 商品を補充する
+usecase 集まった料金を回収する
+}
+客 --> 商品を購入する
+ベンダー --> 商品を補充する
+ベンダー --> 集まった料金を回収する
+@enduml
