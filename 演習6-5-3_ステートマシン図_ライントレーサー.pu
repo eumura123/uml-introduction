@@ -1,0 +1,13 @@
+@startuml  
+left to right direction
+state 稼働中 {
+state entry <<entryPoint>>
+state exit <<exitPoint>>
+entry --> 右モータON左モータOFF
+右モータOFF左モータON-right->右モータON左モータOFF: 暗い
+右モータOFF左モータON<-left-右モータON左モータOFF: 明るい
+右モータON左モータOFF --> exit
+}
+[*]-->entry: 電源ON
+exit-->[*]: 電源OFF
+@enduml

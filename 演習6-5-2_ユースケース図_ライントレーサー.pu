@@ -1,0 +1,19 @@
+@startuml  
+left to right direction
+actor ユーザー
+actor CPU
+actor 光センサ
+rectangle ライントレーサー{
+usecase 電源ON
+usecase 電源OFF
+usecase 明暗判定
+usecase 右モータ操作
+usecase 左モータ操作
+}
+ユーザー --> 電源ON
+ユーザー --> 電源OFF
+CPU --> 右モータ操作
+CPU --> 左モータ操作
+光センサ --> CPU
+光センサ --> 明暗判定
+@enduml
